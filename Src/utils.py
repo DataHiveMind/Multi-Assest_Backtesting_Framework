@@ -18,21 +18,25 @@ class data_loading():
 
         # Save the DataFrame to the specified directory
         df.to_csv(os.path.join(save_path, 'AAPL.csv'), index=False)
-
-
+        
+        return df
 
     def stock_data(self):
         data = yf.download(self.ticker, start = self.start, end = self.end)
         return data
+    
     def bond_data(self):
         data = yf.download(self.ticker, start = self.start, end = self.end)
         return data
+    
     def crypto_data(self):
         data = yf.download(self.ticker, start = self.start, end = self.end)
         return data
+    
     def forex_data(self):
         data = yf.download(self.ticker, start = self.start, end = self.end)
         return data
+    
     def commodity_data(self):
         data = yf.download(self.ticker, start = self.start, end = self.end)
         return data
